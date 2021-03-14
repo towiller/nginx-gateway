@@ -1,0 +1,12 @@
+#!/bin/sh
+
+cdir=$(cd `dirname $0`; cd ..; pwd)
+
+luajitPath="$cdir/luajit"
+nginxSbin=$cdir/nginx/sbin/nginx
+
+export LD_LIBRARY_PATH=$luajitPath/lib:$LD_LIBRARY_PATH
+export PATH=$luajitPath/bin:$PATH
+export C_INCLUDE_PATH=$luajitPath/include:$C_INCLUDE_PATH
+
+$nginxSbin $@
