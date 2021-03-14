@@ -1,4 +1,4 @@
-## nginx-RPC
+## nginx-gateway
 
 #### 参考资料
 
